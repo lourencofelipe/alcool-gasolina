@@ -1,5 +1,7 @@
+import 'package:alcool_gasolina/widgets/input.widget.dart';
 import 'package:alcool_gasolina/widgets/logo.widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_masked_text/flutter_masked_text.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +20,10 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  var _gasCtrl =
+      new MoneyMaskedTextController(); // Create a new private money mask controller.
+  var _alcCtrl = new MoneyMaskedTextController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +32,14 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Logo(),
+          Input(
+            ctrl: _gasCtrl,
+            label: "Gasolina",
+          ),
+          Input(
+            ctrl: _alcCtrl,
+            label: "Álcool",
+          ),
         ],
       ),
     );
