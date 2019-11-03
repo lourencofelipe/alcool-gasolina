@@ -1,3 +1,4 @@
+import 'package:alcool_gasolina/widgets/logo.widget.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -24,25 +25,7 @@ class HomePage extends StatelessWidget {
           .primaryColor, // Get the primary color (primarySwatch).
       body: ListView(
         children: <Widget>[
-          SizedBox(
-            height: 60,
-          ),
-          Image.asset(
-            "assets/images/aog-white.png",
-            height: 80,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            "Álcool ou Gasolina",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontFamily: "Big Shoulders Display",
-            ),
-            textAlign: TextAlign.center,
-          ),
+          Logo(),
         ],
       ),
     );
