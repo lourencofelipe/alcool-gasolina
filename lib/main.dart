@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
       title: 'Alcool ou Gasolina',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
       ),
       home: HomePage(),
     );
@@ -19,6 +19,32 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Theme.of(context)
+          .primaryColor, // Get the primary color (primarySwatch).
+      body: ListView(
+        children: <Widget>[
+          SizedBox(
+            height: 60,
+          ),
+          Image.asset(
+            "assets/images/aog-white.png",
+            height: 80,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            "Álcool ou Gasolina",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 25,
+              fontFamily: "Big Shoulders Display",
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
+    );
   }
 }
